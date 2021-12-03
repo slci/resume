@@ -1,0 +1,74 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{TLCresume}[11/19/21 resume package]
+% Author: Timmy Chan
+
+% Assuming using "article" document class and letter sized paper.
+% FONT STUFF
+
+\RequirePackage[T1]{fontenc} %  Font encoding https://texfaq.org/FAQ-why-inp-font
+\RequirePackage[default,semibold]{sourcesanspro}
+\RequirePackage[10pt]{moresize}
+\usepackage{anyfontsize}
+\RequirePackage{csquotes}
+
+% MARGINS AND SPACING
+\usepackage[letter, top=2cm, bottom=2cm, left=1cm, right=1cm]{geometry} % Set Margins
+\raggedright % left align no indent
+\raggedbottom % top align no indent
+
+% COLOR
+\RequirePackage{xcolor}
+\definecolor{highlight}{RGB}{61, 90, 128}
+
+% LINKS
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=highlight}
+
+% BULLET POINTS
+\RequirePackage[inline]{enumitem}
+\setlength{\tabcolsep}{0in}
+
+% SECTION FORMATTING 
+\RequirePackage[nostruts]{titlesec}
+\titlespacing*{\section}{0em}{2.5em}{0em}
+\titleformat{\section}{\color{highlight} \scshape \raggedright \large}{}{0em}{}[\vspace{-0.75em}\hrulefill]
+
+% SUBSECTION FORMATTING
+\titlespacing*{\subsection}{0em}{0.5em}{0em}
+\titleformat{\subsection}{\bfseries}{}{0em}{}[]
+
+% BOLD COMMAND
+\newcommand{\skills}[1]{ {\bfseries #1}}
+
+% SUBTEXT
+\newcommand{\subtext}[1]{\textit{#1}\par}
+
+% TECHNOLOGIES
+\newcommand{\techs}[1]{ {\hspace{3.5mm}\fontsize{8}{8}\textbf{Technologies: #1}} }
+
+% tighter spacing than itemize
+\setlist[itemize]{align=parleft,left=0pt..1em}
+\newenvironment{zitemize}{
+\begin{itemize} \itemsep 3pt \parskip 0pt \parsep 1pt}
+{\end{itemize}\vspace{-.5em}}
+
+% NO PAGE NUMBER
+\pagenumbering{gobble}
+
+% SUBFILES IMPORTING
+\RequirePackage{standalone}
+\RequirePackage{import}
+
+% FOR TEMPLATE FILLER
+\RequirePackage[english]{babel}
+\RequirePackage{blindtext}% Filler Text
+
+% FOOTER %
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\cfoot{\fontsize{6}{6} \selectfont
+\raggedright I agree to the processing of personal data provided in this document for realizing the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).
+}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}

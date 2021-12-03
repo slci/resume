@@ -1,0 +1,25 @@
+%====================
+% Header: Contact
+%====================
+\begin{center}
+	\begin{minipage}[b]{.25\textwidth}
+	\raggedright
+	{\large \phone} \\ % PHONE
+	{\address} \\ % Street nr
+	{\city} % City
+	\end{minipage}%
+	\begin{minipage}[b]{.5\textwidth}
+	\makeatletter
+	\centering {\HUGE \@author} \\
+	\makeatother
+    \vspace{.5em}
+    {\color{highlight} \Large{\role}}
+	\end{minipage}%
+	\begin{minipage}[b]{.2\textwidth}
+	\raggedleft 
+	\href{https://github.com/\github}{GitHub: \github} \\% Portfolio 
+	\href{https://www.linkedin.com/in/\LinkedIn}{LinkedIn: \LinkedIn} \\% LinkedIn
+	\href{mailto:\email}{\email} % EMAIL
+	\end{minipage}
+
+\end{center}

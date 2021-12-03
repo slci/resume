@@ -1,0 +1,80 @@
+\documentclass[letter,10pt]{article}
+\usepackage{TLCresume}
+\begin{document}
+
+%====================
+% Siili Solutions
+%====================
+\subsection{{Lead Software Engineer / Instrument Cluster and Infotainment \hfill Aug 2021 --- Present}}
+\subtext{Siili Solutions \hfill Szczecin, Poland}
+\techs{C++, Python, Java, QNX, Qt, QtIVI, Android Automotive, CAN, LIN, Data-Distribution Service }
+\begin{zitemize}
+\item Development of production Cluster and IVI system for upcoming luxury EV SUV
+\item Suspendisse pretium elit quis ullamcorper ultricies.
+\item Morbi a nisl sit amet massa ultricies fermentum.
+\item Sed a diam et turpis tempor venenatis eget eget ipsum.
+\item Vestibulum fermentum justo vitae aliquet accumsan.
+\end{zitemize}
+
+%====================
+% GlobalLogic Poland
+%====================
+\subsection{{Senior Software Engineer / On-Board Diagnostic services for Adaptive AUTOSAR \hfill Dec 2019 --- Jul 2021}}
+\subtext{GlobalLogic Poland \hfill Szczecin, Poland}
+\techs{Adaptive AUTOSAR, C++, Python, UDS, GNU/Linux}
+\begin{zitemize}
+\item Adaptive AUTOSAR application that provides car diagnostic data and services in compliance to UDS (ISO 14229) and Adaptive AUTOSAR Diagnostics.
+\item Fixing existing, adding missing functionality as well as bringing quality to the code by refactoring towards object-oriented and test-driven development in modern C++.
+\item Development of a generic testing library for Adaptive AUTOSAR applications that was adopted by many teams also developing AA apps. The library decoupled application implementation from underlying AUTOSAR base software, provided isolated and fast tests run-time and provided modern testing and mocking frameworks (Catch2 and Trompeloeil) to programmers.
+\item Introducing a testing framework has given the possibility to write real unit tests for the existing implementation and saved a lot of time by having one, common testing API for all AUTOSAR specific dependencies, e.g. for ara::com communication stack.
+\item Automatizing of configuration, build and deployment process of the application which has halved the non-productive hours spent in the project.
+\end{zitemize}
+
+%====================
+% Mobica Limited
+%====================
+\subsection{{Senior Software Engineer / Navigational data service for IVI and ADAS systems \hfill Jan 2018 --- Nov 2019}}
+\subtext{Mobica Limited \hfill Szczecin, Poland}
+\techs{GNU/Linux, C++, Adaptive AUTOSAR, Navigation Data Standard (NDS)}
+\begin{zitemize}
+\item Application that provides high resolution, lane detailed map data to In-Vehicle Infotainment and driver assistance components.
+\item The main concept of the application was reacting on vehicle position changes, route mapping events and GNSS data and providing very detailed map data for vehicle surroundings and navigation route in form of cyclic events sent over Adaptive AUTOSAR communication stack.
+\item As a C++ developer, I've optimized the implementation to meet the rigorous timing constraints, reducing the map data processing from the order of seconds to single milliseconds.
+\item One of the most appreciated outcomes I've developed was end-to-end testing framework that consisted of vehicle events and map data recorder and simulator. It was also adopted for testing other, client applications that depended upon interface our app provided.
+\end{zitemize}
+
+\subsection{{Software Engineer / Foundation software stack for IVI systems \hfill Jul 2014 --- Dec 2017}}
+\subtext{Mobica Limited \hfill Szczecin, Poland}
+\techs{GNU/Linux C++, C, Java, Xtend, GENIVI Franca, Common API, SomeIP, TCP/IP, ANTLR, OpenStreetMap, CMake, Eclipse}
+\begin{zitemize}
+\item Development of a foundation software stack on top of an Embedded Linux System for In-Vehicle Infotainment Systems for the world's largest and highest valued semiconductor.
+chip maker.
+\item Inter-process communication code generators that generate modern C++ program code for a modeled software system. Transformation of interface definition languages (Franca or domain specific language) with combination of software system model into highly efficient C++ code that use a chosen IPC mechanism like D-Bus or SomeIP.
+\item CAN signal server generator that transforms a list of defined vehicle CAN signals into high level interface description model and generates a dispatcher application that provides CAN signals service for other applications over a chosen IPC mechanism.
+\item C++ Software Component Generator that provides a variety of common initialization, communication and life-cycle mechanisms of a C++ software application. Definition of a domain specific language that provides an abstraction layer for software component structure description. Implemented using Xtend and Xtext technologies. Integration of the component generator with project build system based on CMake.
+\item IPC bridge application that expanded in-vehicle, local, ultra fast communication mechanism to multiple embedded systems. Implementation of GENIVI CommonAPI addressing and routing over a thin layer packet exchange mechanism based on SCTP.
+\item Implementation of data exchange library that provided a clean, high-level API on top of SCTP/IP protocols, for sending and receiving arbitrarily sized packets of data. The library was used in IPC bridge application and many other customer implementations, providing, testable, robust and unified way of exchanging data packets for automotive applications.
+\item Lanelet road network generator. Reading OpenStreepMap data, conversion into 2D polygon-like Lanelets. Generation of driving lanes, intersections, traffic regulations, crosswalks and other road network elements. The resulting data was used for creating tests scenarios for autonomous driving car software.
+\end{zitemize}
+
+%====================
+% Tieto Poland
+%====================
+\subsection{{Software Engineer / 4G/LTE cellular systems software \hfill Jan 2013 --- Jun 2014}}
+\subtext{Tieto Poland \hfill Szczecin, Poland}
+\techs{C, GNU/Linux, TCP/IP, LTE L2/L3}
+\begin{zitemize}
+\item Feasibility studies, design, implementation and integration of software on embedded systems according to 3GPP specifications.
+\item LTE protocols, PDCP, GTP-U and GTP-C implementation for virtualized eNodeB.
+\item LTE packet generator for testing the protocol stack implementation.
+\end{zitemize}
+
+\subsection{{Junior Software Engineer / IP DSLAM software \hfill Oct 2011 --- Dec 2012}}
+\subtext{Tieto Poland \hfill Szczecin, Poland}
+\techs{C, Nucleus RTOS, TCP/IP}
+\begin{zitemize}
+\item Code refactoring and bug fixing of mature, large embedded networking software project.
+\item Hardening the system by implementation of attack prevention filters, e.g. ARP flood or port scanning prevention.
+\end{zitemize}
+
+\end{document}
